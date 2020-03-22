@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>align-items和align-content的区别和使用场景 | Hexo</title>
-  <meta name="keywords" content=" html5 , css ">
-  <meta name="description" content="align-items和align-content的区别和使用场景 | Hexo">
+  <title>vue-ssr服务端渲染方案 | Hexo</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="vue-ssr服务端渲染方案 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="解释型vs编译型 编译型语言是代码在运行前编译器将人类可以理解的语言（编程语言）转换成机器可以理解的语言解释型语言也是人类可以理解的语言（编程语言），也需要转换成机器可以理解的语言才能执行，但是是在运行时转换的。所以执行前需要解释器安装在环境中；但是编译型语言编写的应用在编译后能直接运行。  通常的编译过程：步骤：  是分词与词法分析：把输入的字符串分解为一些对编程语言有意义的代码块（词法单元）。">
 <meta property="og:type" content="article">
@@ -395,9 +395,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-2019-03-1-1" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-vue-ssr服务端渲染方案" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">align-items和align-content的区别和使用场景</h1>
+        <h1 class="article-title">vue-ssr服务端渲染方案</h1>
     
     <div class="article-meta">
         
@@ -405,23 +405,15 @@
         
         <span class="book">
             
-                <a  data-rel="日积">日积</a>
+                <a  data-rel="ssr">ssr</a>
             
         </span>
         
-        
-        <span class="tag">
-            
-            <a class="color1">html5</a>
-            
-            <a class="color4">css</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-03-22 10:42:49'>2019-04-01 00:00</time>
+        创建时间:<time class="date" title='更新时间: 2020-03-22 12:06:55'>2020-03-02 00:00</time>
         
     </div>
     <div class="article-meta">
@@ -443,7 +435,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#align-items和align-content的区别和使用场景"><span class="toc-text">align-items和align-content的区别和使用场景</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#align-items"><span class="toc-text">align-items</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#align-content"><span class="toc-text">align-content</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#vue-ssr-思路"><span class="toc-text">vue-ssr 思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#流程"><span class="toc-text">流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webpack配置"><span class="toc-text">webpack配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#client配置"><span class="toc-text">client配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#server配置"><span class="toc-text">server配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实战中的细节"><span class="toc-text">实战中的细节</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目遇到的坎。。。"><span class="toc-text">项目遇到的坎。。。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实战"><span class="toc-text">实战</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -459,13 +451,123 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="align-items和align-content的区别和使用场景"><a href="#align-items和align-content的区别和使用场景" class="headerlink" title="align-items和align-content的区别和使用场景"></a>align-items和align-content的区别和使用场景</h1><h2 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a>align-items</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">The align-items property applies to all flex containers, and sets the default alignment of the flex items along the cross axis of each flex line.</span><br><span class="line">align-items属性适用于所有的flex容器，它是用来设置每个flex元素在侧轴上的默认对齐方式。</span><br></pre></td></tr></table></figure>
-
-
-<hr>
-<h2 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a>align-content</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">align-items has the same functionality as align-content but the difference is that it works to center every single-line Container instead of </span><br><span class="line">centering the whole container.</span><br><span class="line">align-items和align-content有相同的功能，不过不同点是它是用来让每一个单行的容器居中而不是让整个容器居中。</span><br></pre></td></tr></table></figure>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>看到这里大概已经明白了概念，align-content是针对flex容器里面多轴(多行)的情况,align-items是针对一行的情况进行排列。下面写个小demo。</p>
-<p><a href="https://www.cnblogs.com/zmc-change/p/6178757.html[参考](https://www.cnblogs.com/zmc-change/p/6178757.html)" target="_blank" rel="noopener">https://www.cnblogs.com/zmc-change/p/6178757.html[参考](https://www.cnblogs.com/zmc-change/p/6178757.html)</a></p>
+        <h2 id="vue-ssr-思路"><a href="#vue-ssr-思路" class="headerlink" title="vue-ssr 思路"></a>vue-ssr 思路</h2><p>简单点说下出场人物吧，vue，koa，vue-server-renderer，webpack</p>
+<blockquote>
+<p>vue：我用vue-cli3创建的项目作为前端（这点埋下了个坑，后面会说）</p>
+<p>koa：我用koa创建一个服务端</p>
+<p>vue-server-renderer：vue服务端渲染的库</p>
+<p>webpack：分别进行配置使其三者融合好，而且还通过它的devServer作为一个服务器与node端进行了通信（这个后面会重点讲），然后分别在client和server的配置文件中使用vue-server-renderer的client-plugin和server-plugin进行插件注册，目的生成对应的清单文件（你可以理解为打包好的文件是json）二者都有默认名称分别是vue-ssr-client-manifest.json和vue-ssr-server-bundle.json</p>
+</blockquote>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol>
+<li>打包前端代码，然后执行打包命令生成vue-ssr-client-manifest.json，此时webpapck启动了devserver</li>
+<li>使用webpack对服务端进行打包生成一个bundle，同时通过axios去获取前端打包好的vue-ssr-client-manifest.json,然后再读取模版文件server.template.ejs</li>
+<li>然后创建vue-server-renderer（服务端渲染库）的实例，将bundle，vue-ssr-client-manifest.json，server.template.ejs作为参数传入进这个实例，然后生成一个renderer对象并调用renderToString函数传入一个context上下文对象作为插值生成一个appString，实际上就是与webpack打包的entry文件进行交互，通过context的url进行服务器端的路由设置，从而渲染运行。我拿个图吧。。。。</li>
+</ol>
+<h2 id="webpack配置"><a href="#webpack配置" class="headerlink" title="webpack配置"></a>webpack配置</h2><h3 id="client配置"><a href="#client配置" class="headerlink" title="client配置"></a>client配置</h3><pre><code>const ClientPlugin = require(&apos;vue-server-renderer/client-plugin&apos;),//生成客户端清单
+    nodeExternals = require(&apos;webpack-node-externals&apos;);//忽略node_modules文件夹中的所有模块
+module.exports = {
+    devServer: {
+        proxy: &apos;http://localhost:8080&apos;//通过这个服务地址进行前端打包文件的获取
+    },
+    outputDir: &apos;dist/&apos;,
+    configureWebpack: (config) =&gt; {
+        return ({
+            entry: `./src/entry/client`,
+            output: {
+                filename: &apos;js/[name].js&apos;,
+                chunkFilename: &apos;js/[name].js&apos;,
+                libraryTarget:  undefined
+            },
+            target:  &apos;web&apos;,
+            externals:  undefined,
+            plugins: [
+               new ClientPlugin(),//根据环境调用不同的渲染插件。
+            ]
+        })
+    },
+    chainWebpack: config =&gt; {
+        config.resolve.alias
+            .set(&apos;vue$&apos;, &apos;vue/dist/vue.esm.js&apos;)
+        config.module
+            .rule(&apos;vue&apos;)
+            .use(&apos;vue-loader&apos;)
+            .tap(options =&gt; {
+                options.optimizeSSR = false;
+                return options;
+            });
+        config.module
+            .rule(&apos;images&apos;)
+            .use(&apos;url-loader&apos;)
+            .tap(options =&gt; {
+                options = {
+                    limit: 1024,
+                    fallback: &apos;file-loader?name=img/[path][name].[ext]&apos;
+                }
+                return options;
+            });
+    }
+}</code></pre><h3 id="server配置"><a href="#server配置" class="headerlink" title="server配置"></a>server配置</h3><pre><code>const ServerPlugin = require(&apos;vue-server-renderer/server-plugin&apos;),//生成服务端清单
+  nodeExternals = require(&apos;webpack-node-externals&apos;);//忽略node_modules文件夹中的所有模块
+// const ExtractPlugin = require(&apos;extract-text-webpack-plugin&apos;)
+const utils = require(&apos;util&apos;)
+const path = require(&apos;path&apos;)
+// const merge = require(&apos;webpack-merge&apos;)
+// const baseConfig = require(&apos;./webpack.config.base&apos;);
+const createVueLoaderOptions = require(&apos;./vue-loader.config&apos;)
+const VueLoaderPlugin = require(&apos;vue-loader/lib/plugin&apos;);
+const isDev = process.env.NODE_ENV === &apos;development&apos;
+module.exports = {
+  target: &apos;node&apos;,//1，首先指定node平台，这个是要在服务器端进行配置的
+  entry: `./src/entry/server`,//2. 指定入口文件
+  devtool: &apos;source-map&apos;,//3. 开启sourcemap
+  output: {
+    libraryTarget: &apos;commonjs2&apos;,
+    filename: &apos;server-entry.js&apos;,
+    path: path.join(__dirname, &apos;../distDev&apos;)
+  },
+  externals: Object.keys(require(&apos;../package.json&apos;).dependencies),//一些库在前端都已经打包好了，服务端做下排除
+  plugins: [
+    new ServerPlugin(),//真多服务器端点用服务器端插件
+    new VueLoaderPlugin(),//不加不行。。
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.(vue|js|jsx)$/,
+        loader: &apos;eslint-loader&apos;,
+        exclude: /node_modules/,
+        enforce: &apos;pre&apos;
+      },
+      {
+        test: /\.vue$/,
+        loader: &apos;vue-loader&apos;,
+        options: createVueLoaderOptions(isDev)
+      },
+      {
+        test: /\.jsx$/,
+        loader: &apos;babel-loader&apos;
+      },
+      {
+        test: /\.js$/,
+        loader: &apos;babel-loader&apos;,
+        exclude: /node_modules/
+      },
+      {
+        test: /\.(gif|jpg|jpeg|png|svg)$/,
+        use: [
+          {
+            loader: &apos;url-loader&apos;,
+            options: {
+              limit: 1024,
+              name: &apos;resources/[path][name].[hash:8].[ext]&apos;
+            }
+          }
+        ]
+      }
+    ]
+  }
+}</code></pre><h2 id="实战中的细节"><a href="#实战中的细节" class="headerlink" title="实战中的细节"></a>实战中的细节</h2><h2 id="项目遇到的坎。。。"><a href="#项目遇到的坎。。。" class="headerlink" title="项目遇到的坎。。。"></a>项目遇到的坎。。。</h2><p>不是啥坑，是自己针对vue-cli3的项目配置文件vue.config.js配置掌握不够，习惯了之前配置方式，待我系统学习完再继续完善项目</p>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p><a href="https://github.com/wozhaodiaodiao/my-vue-ssr" target="_blank" rel="noopener">项目地址</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -475,12 +577,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>align-items和align-content的区别和使用场景</p>
+    <p><span class="copy-title">文章标题:</span>vue-ssr服务端渲染方案</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="阿强">阿强</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-04-01, 00:00:00</p>
-    <p><span class="copy-title">最后更新:</span>2020-03-22, 10:42:49</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/04/01/2019-03-1-1/" title="align-items和align-content的区别和使用场景">https://wozhaodiaodiao.github.io/2019/04/01/2019-03-1-1/</a>
+    <p><span class="copy-title">发布时间:</span>2020-03-02, 00:00:00</p>
+    <p><span class="copy-title">最后更新:</span>2020-03-22, 12:06:55</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/02/vue-ssr%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93%E6%96%B9%E6%A1%88/" title="vue-ssr服务端渲染方案">https://wozhaodiaodiao.github.io/2020/03/02/vue-ssr%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93%E6%96%B9%E6%A1%88/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

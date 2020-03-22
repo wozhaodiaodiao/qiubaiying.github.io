@@ -9,12 +9,12 @@
 <meta name="description" content="解释型vs编译型 编译型语言是代码在运行前编译器将人类可以理解的语言（编程语言）转换成机器可以理解的语言解释型语言也是人类可以理解的语言（编程语言），也需要转换成机器可以理解的语言才能执行，但是是在运行时转换的。所以执行前需要解释器安装在环境中；但是编译型语言编写的应用在编译后能直接运行。  通常的编译过程：步骤：  是分词与词法分析：把输入的字符串分解为一些对编程语言有意义的代码块（词法单元）。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js是解释型语言么？引发的一系列思考和学习">
-<meta property="og:url" content="https://wozhaodiaodiao.github.io/2020/03/18/js%E6%98%AF%E5%90%A6%E6%98%AF%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80%20copy/index.html">
+<meta property="og:url" content="https://wozhaodiaodiao.github.io/2020/03/18/js%E6%98%AF%E5%90%A6%E6%98%AF%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="解释型vs编译型 编译型语言是代码在运行前编译器将人类可以理解的语言（编程语言）转换成机器可以理解的语言解释型语言也是人类可以理解的语言（编程语言），也需要转换成机器可以理解的语言才能执行，但是是在运行时转换的。所以执行前需要解释器安装在环境中；但是编译型语言编写的应用在编译后能直接运行。  通常的编译过程：步骤：  是分词与词法分析：把输入的字符串分解为一些对编程语言有意义的代码块（词法单元）。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-18T08:37:26.618Z">
-<meta property="article:modified_time" content="2020-03-18T08:37:26.620Z">
+<meta property="article:modified_time" content="2020-03-22T02:08:13.329Z">
 <meta property="article:author" content="阿强">
 <meta name="twitter:card" content="summary">
 
@@ -64,7 +64,7 @@
 <div class="icon">
     
         
-        <a title="github" href="https://github.com/yelog" target="_blank">
+        <a title="github" href="https://github.com/wozhaodiaodiao" target="_blank">
             
                 <svg class="iconfont-svg" aria-hidden="true">
                     <use xlink:href="#icon-github"></use>
@@ -79,15 +79,7 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(17)</small></div></li>
-    
-        
-            
-            <li><div data-rel="hehe">hehe<small>(1)</small></div>
-                
-            </li>
-            
-        
+    <li><div class="all active">全部文章<small>(21)</small></div></li>
     
         
             
@@ -105,6 +97,38 @@
             
         
     
+        
+            
+            <li><div data-rel="日积">日积<small>(9)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="react">react<small>(3)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="JS">JS<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="vue">vue<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -113,9 +137,9 @@
     
     
     </div>
-    <div><a class="about  site_url"  href="/about">关于</a></div>
+    <div></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="17">
+<input type="hidden" id="yelog_site_posts_number" value="21">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -132,7 +156,7 @@
     <div class="friends-content">
         <ul>
             
-            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            <li><a target="_blank" href="https://github.com/wozhaodiaodiao">阿强</a></li>
             
         </ul>
     </div>
@@ -191,14 +215,6 @@
     
     <nav id="title-list-nav">
         
-        <a  class="hehe "
-           href="/2020/03/18/hello-world/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Hello World">Hello World</span>
-            <span class="post-date" title="2020-03-18 15:20:30">2020/03/18</span>
-        </a>
-        
         <a  class=""
            href="/2018/06/29/2018-06-29-info/"
            data-tag=""
@@ -215,7 +231,7 @@
             <span class="post-date" title="2018-07-02 00:00:00">2018/07/02</span>
         </a>
         
-        <a  class=""
+        <a  class="日积 "
            href="/2018/07/06/2018-07-06-info/"
            data-tag="cocoscreater"
            data-author="" >
@@ -223,7 +239,7 @@
             <span class="post-date" title="2018-07-06 00:00:00">2018/07/06</span>
         </a>
         
-        <a  class=""
+        <a  class="日积 "
            href="/2018/07/16/2018-07-16-info/"
            data-tag="cocoscreater"
            data-author="" >
@@ -231,7 +247,7 @@
             <span class="post-date" title="2018-07-16 00:00:00">2018/07/16</span>
         </a>
         
-        <a  class=""
+        <a  class="日积 "
            href="/2018/07/12/2018-07-12-info/"
            data-tag="cocoscreater,DragonBones"
            data-author="" >
@@ -239,7 +255,7 @@
             <span class="post-date" title="2018-07-12 00:00:00">2018/07/12</span>
         </a>
         
-        <a  class=""
+        <a  class="JS "
            href="/2018/07/26/2018-07-26-1/"
            data-tag="ES6,js"
            data-author="" >
@@ -247,7 +263,7 @@
             <span class="post-date" title="2018-07-26 00:00:00">2018/07/26</span>
         </a>
         
-        <a  class=""
+        <a  class="日积 "
            href="/2019/04/01/2019-03-1-1/"
            data-tag="html5,css"
            data-author="" >
@@ -255,7 +271,7 @@
             <span class="post-date" title="2019-04-01 00:00:00">2019/04/01</span>
         </a>
         
-        <a  class=""
+        <a  class="日积 "
            href="/2019/03/01/2019-03-1-2/"
            data-tag="js"
            data-author="" >
@@ -263,7 +279,7 @@
             <span class="post-date" title="2019-03-01 00:00:00">2019/03/01</span>
         </a>
         
-        <a  class=""
+        <a  class="日积 "
            href="/2019/04/01/2019-03-1-4/"
            data-tag="js,vue"
            data-author="" >
@@ -271,7 +287,7 @@
             <span class="post-date" title="2019-04-01 00:00:00">2019/04/01</span>
         </a>
         
-        <a  class=""
+        <a  class="日积 "
            href="/2019/04/01/2019-03-1-5/"
            data-tag="ES6,js"
            data-author="" >
@@ -279,7 +295,7 @@
             <span class="post-date" title="2019-04-01 00:00:00">2019/04/01</span>
         </a>
         
-        <a  class=""
+        <a  class="vue "
            href="/2019/04/04/2019-04-1-1/"
            data-tag="js,vue"
            data-author="" >
@@ -287,7 +303,7 @@
             <span class="post-date" title="2019-04-04 00:00:00">2019/04/04</span>
         </a>
         
-        <a  class=""
+        <a  class="vue "
            href="/2019/04/03/2019-04-1-2/"
            data-tag="js,vue"
            data-author="" >
@@ -295,7 +311,7 @@
             <span class="post-date" title="2019-04-03 00:00:00">2019/04/03</span>
         </a>
         
-        <a  class=""
+        <a  class="vue "
            href="/2019/04/01/2019-04-1-3/"
            data-tag="js,vue"
            data-author="" >
@@ -303,7 +319,7 @@
             <span class="post-date" title="2019-04-01 00:00:00">2019/04/01</span>
         </a>
         
-        <a  class=""
+        <a  class="vue "
            href="/2019/04/02/2019-04-1-4/"
            data-tag="js,vue"
            data-author="" >
@@ -312,19 +328,59 @@
         </a>
         
         <a  class="js "
-           href="/2020/03/18/js%E6%98%AF%E5%90%A6%E6%98%AF%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80%20copy/"
+           href="/2020/03/18/js%E6%98%AF%E5%90%A6%E6%98%AF%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="js是解释型语言么？引发的一系列思考和学习">js是解释型语言么？引发的一系列思考和学习</span>
             <span class="post-date" title="2020-03-18 16:37:26">2020/03/18</span>
         </a>
         
-        <a  class="ssr "
-           href="/2020/03/18/js%E6%98%AF%E5%90%A6%E6%98%AF%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80/"
+        <a  class="日积 "
+           href="/2020/03/02/concurrently%EF%BC%9Anpm%E5%91%BD%E4%BB%A4%E5%B9%B6%E8%A1%8C%E6%89%A7%E8%A1%8C/"
            data-tag=""
            data-author="" >
-            <span class="post-title" title="js是解释型语言么？引发的一系列思考和学习">js是解释型语言么？引发的一系列思考和学习</span>
-            <span class="post-date" title="2020-03-18 16:32:38">2020/03/18</span>
+            <span class="post-title" title="concurrently：npm命令并行执行">concurrently：npm命令并行执行</span>
+            <span class="post-date" title="2020-03-02 00:00:00">2020/03/02</span>
+        </a>
+        
+        <a  class="日积 "
+           href="/2020/03/02/nodemon%E8%B0%83%E8%AF%95nodeJs/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="nodemon调试nodeJs">nodemon调试nodeJs</span>
+            <span class="post-date" title="2020-03-02 00:00:00">2020/03/02</span>
+        </a>
+        
+        <a  class="react "
+           href="/2020/03/22/react-hooks-%E5%85%A5%E9%97%A8/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="react-hooks 入门">react-hooks 入门</span>
+            <span class="post-date" title="2020-03-22 10:55:40">2020/03/22</span>
+        </a>
+        
+        <a  class="react "
+           href="/2020/03/22/hooks%E4%B9%8BuseState/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="hooks之useState">hooks之useState</span>
+            <span class="post-date" title="2020-03-22 11:12:03">2020/03/22</span>
+        </a>
+        
+        <a  class="react "
+           href="/2020/03/22/hooks%E4%B9%8BuseEffect/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="hooks之useEffect">hooks之useEffect</span>
+            <span class="post-date" title="2020-03-22 11:24:18">2020/03/22</span>
+        </a>
+        
+        <a  class="ssr "
+           href="/2020/03/02/vue-ssr%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93%E6%96%B9%E6%A1%88/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="vue-ssr服务端渲染方案">vue-ssr服务端渲染方案</span>
+            <span class="post-date" title="2020-03-02 00:00:00">2020/03/02</span>
         </a>
         
     </nav>
@@ -396,10 +452,6 @@
 </article>
 
 
-<p>
-    <a  class="dashang" onclick="dashangToggle()">赏</a>
-</p>
-
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>终于有了自己的博客,以后我会不时地更新自己的成长点滴，分享自己的学习心得，敬请期待！</p>
@@ -424,7 +476,7 @@
 
     </div>
     <div class="copyright">
-        <p class="footer-entry">©2016-2019 Yelog</p>
+        <p class="footer-entry">©2016-2019 阿强</p>
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
@@ -441,24 +493,6 @@
     </div>
 </div>
 <div class="acParent"></div>
-
-<div class="hide_box" onclick="dashangToggle()"></div>
-<div class="shang_box">
-    <a class="shang_close"  onclick="dashangToggle()">×</a>
-    <div class="shang_tit">
-        <p>喜欢就点赞,疼爱就打赏</p>
-    </div>
-    <div class="shang_payimg">
-        <div class="pay_img">
-            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
-            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
-        </div>
-    </div>
-    <div class="shang_payselect">
-        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
-    </div>
-</div>
-
 
 </body>
 <script src="/js/jquery.pjax.js?v=1.0.1" ></script>
@@ -481,14 +515,6 @@
         
 
         /*渲染打赏样式*/
-        
-        $("input[name=pay]").on("click", function () {
-            if($("input[name=pay]:checked").val()=="weixin"){
-                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
-            } else {
-                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
-            }
-        })
         
 
         /*高亮代码块行号*/
@@ -521,11 +547,6 @@
     }
 
     /*打赏页面隐藏与展示*/
-    
-    function dashangToggle() {
-        $(".shang_box").fadeToggle();
-        $(".hide_box").fadeToggle();
-    }
     
 
 </script>

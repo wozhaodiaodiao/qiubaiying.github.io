@@ -9,12 +9,12 @@
 <meta name="description" content="解释型vs编译型 编译型语言是代码在运行前编译器将人类可以理解的语言（编程语言）转换成机器可以理解的语言解释型语言也是人类可以理解的语言（编程语言），也需要转换成机器可以理解的语言才能执行，但是是在运行时转换的。所以执行前需要解释器安装在环境中；但是编译型语言编写的应用在编译后能直接运行。  通常的编译过程：步骤：  是分词与词法分析：把输入的字符串分解为一些对编程语言有意义的代码块（词法单元）。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js是解释型语言么？引发的一系列思考和学习">
-<meta property="og:url" content="https://wozhaodiaodiao.github.io/2020/03/18/js%E6%98%AF%E5%90%A6%E6%98%AF%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80%20copy/index.html">
+<meta property="og:url" content="https://wozhaodiaodiao.github.io/2020/03/18/js%E6%98%AF%E5%90%A6%E6%98%AF%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="解释型vs编译型 编译型语言是代码在运行前编译器将人类可以理解的语言（编程语言）转换成机器可以理解的语言解释型语言也是人类可以理解的语言（编程语言），也需要转换成机器可以理解的语言才能执行，但是是在运行时转换的。所以执行前需要解释器安装在环境中；但是编译型语言编写的应用在编译后能直接运行。  通常的编译过程：步骤：  是分词与词法分析：把输入的字符串分解为一些对编程语言有意义的代码块（词法单元）。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-18T08:37:26.618Z">
-<meta property="article:modified_time" content="2020-03-18T08:37:26.620Z">
+<meta property="article:modified_time" content="2020-03-22T02:08:13.329Z">
 <meta property="article:author" content="阿强">
 <meta name="twitter:card" content="summary">
 
@@ -64,7 +64,7 @@
 <div class="icon">
     
         
-        <a title="github" href="https://github.com/yelog" target="_blank">
+        <a title="github" href="https://github.com/wozhaodiaodiao" target="_blank">
             
                 <svg class="iconfont-svg" aria-hidden="true">
                     <use xlink:href="#icon-github"></use>
@@ -79,15 +79,7 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(17)</small></div></li>
-    
-        
-            
-            <li><div data-rel="hehe">hehe<small>(1)</small></div>
-                
-            </li>
-            
-        
+    <li><div class="all active">全部文章<small>(21)</small></div></li>
     
         
             
@@ -105,6 +97,38 @@
             
         
     
+        
+            
+            <li><div data-rel="日积">日积<small>(9)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="react">react<small>(3)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="JS">JS<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="vue">vue<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -113,9 +137,9 @@
     
     
     </div>
-    <div><a class="about  site_url"  href="/about">关于</a></div>
+    <div></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="17">
+<input type="hidden" id="yelog_site_posts_number" value="21">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -132,7 +156,7 @@
     <div class="friends-content">
         <ul>
             
-            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            <li><a target="_blank" href="https://github.com/wozhaodiaodiao">阿强</a></li>
             
         </ul>
     </div>
@@ -191,14 +215,6 @@
     
     <nav id="title-list-nav">
         
-        <a  class="hehe "
-           href="/2020/03/18/hello-world/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Hello World">Hello World</span>
-            <span class="post-date" title="2020-03-18 15:20:30">2020/03/18</span>
-        </a>
-        
         <a  class=""
            href="/2018/06/29/2018-06-29-info/"
            data-tag=""
@@ -215,7 +231,7 @@
             <span class="post-date" title="2018-07-02 00:00:00">2018/07/02</span>
         </a>
         
-        <a  class=""
+        <a  class="日积 "
            href="/2018/07/06/2018-07-06-info/"
            data-tag="cocoscreater"
            data-author="" >
@@ -223,7 +239,7 @@
             <span class="post-date" title="2018-07-06 00:00:00">2018/07/06</span>
         </a>
         
-        <a  class=""
+        <a  class="日积 "
            href="/2018/07/16/2018-07-16-info/"
            data-tag="cocoscreater"
            data-author="" >
@@ -231,7 +247,7 @@
             <span class="post-date" title="2018-07-16 00:00:00">2018/07/16</span>
         </a>
         
-        <a  class=""
+        <a  class="日积 "
            href="/2018/07/12/2018-07-12-info/"
            data-tag="cocoscreater,DragonBones"
            data-author="" >
@@ -239,7 +255,7 @@
             <span class="post-date" title="2018-07-12 00:00:00">2018/07/12</span>
         </a>
         
-        <a  class=""
+        <a  class="JS "
            href="/2018/07/26/2018-07-26-1/"
            data-tag="ES6,js"
            data-author="" >
@@ -247,7 +263,7 @@
             <span class="post-date" title="2018-07-26 00:00:00">2018/07/26</span>
         </a>
         
-        <a  class=""
+        <a  class="日积 "
            href="/2019/04/01/2019-03-1-1/"
            data-tag="html5,css"
            data-author="" >
@@ -255,7 +271,7 @@
             <span class="post-date" title="2019-04-01 00:00:00">2019/04/01</span>
         </a>
         
-        <a  class=""
+        <a  class="日积 "
            href="/2019/03/01/2019-03-1-2/"
            data-tag="js"
            data-author="" >
@@ -263,7 +279,7 @@
             <span class="post-date" title="2019-03-01 00:00:00">2019/03/01</span>
         </a>
         
-        <a  class=""
+        <a  class="日积 "
            href="/2019/04/01/2019-03-1-4/"
            data-tag="js,vue"
            data-author="" >
@@ -271,7 +287,7 @@
             <span class="post-date" title="2019-04-01 00:00:00">2019/04/01</span>
         </a>
         
-        <a  class=""
+        <a  class="日积 "
            href="/2019/04/01/2019-03-1-5/"
            data-tag="ES6,js"
            data-author="" >
@@ -279,7 +295,7 @@
             <span class="post-date" title="2019-04-01 00:00:00">2019/04/01</span>
         </a>
         
-        <a  class=""
+        <a  class="vue "
            href="/2019/04/04/2019-04-1-1/"
            data-tag="js,vue"
            data-author="" >
@@ -287,7 +303,7 @@
             <span class="post-date" title="2019-04-04 00:00:00">2019/04/04</span>
         </a>
         
-        <a  class=""
+        <a  class="vue "
            href="/2019/04/03/2019-04-1-2/"
            data-tag="js,vue"
            data-author="" >
@@ -295,7 +311,7 @@
             <span class="post-date" title="2019-04-03 00:00:00">2019/04/03</span>
         </a>
         
-        <a  class=""
+        <a  class="vue "
            href="/2019/04/01/2019-04-1-3/"
            data-tag="js,vue"
            data-author="" >
@@ -303,7 +319,7 @@
             <span class="post-date" title="2019-04-01 00:00:00">2019/04/01</span>
         </a>
         
-        <a  class=""
+        <a  class="vue "
            href="/2019/04/02/2019-04-1-4/"
            data-tag="js,vue"
            data-author="" >
@@ -312,19 +328,59 @@
         </a>
         
         <a  class="js "
-           href="/2020/03/18/js%E6%98%AF%E5%90%A6%E6%98%AF%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80%20copy/"
+           href="/2020/03/18/js%E6%98%AF%E5%90%A6%E6%98%AF%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="js是解释型语言么？引发的一系列思考和学习">js是解释型语言么？引发的一系列思考和学习</span>
             <span class="post-date" title="2020-03-18 16:37:26">2020/03/18</span>
         </a>
         
-        <a  class="ssr "
-           href="/2020/03/18/js%E6%98%AF%E5%90%A6%E6%98%AF%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80/"
+        <a  class="日积 "
+           href="/2020/03/02/concurrently%EF%BC%9Anpm%E5%91%BD%E4%BB%A4%E5%B9%B6%E8%A1%8C%E6%89%A7%E8%A1%8C/"
            data-tag=""
            data-author="" >
-            <span class="post-title" title="js是解释型语言么？引发的一系列思考和学习">js是解释型语言么？引发的一系列思考和学习</span>
-            <span class="post-date" title="2020-03-18 16:32:38">2020/03/18</span>
+            <span class="post-title" title="concurrently：npm命令并行执行">concurrently：npm命令并行执行</span>
+            <span class="post-date" title="2020-03-02 00:00:00">2020/03/02</span>
+        </a>
+        
+        <a  class="日积 "
+           href="/2020/03/02/nodemon%E8%B0%83%E8%AF%95nodeJs/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="nodemon调试nodeJs">nodemon调试nodeJs</span>
+            <span class="post-date" title="2020-03-02 00:00:00">2020/03/02</span>
+        </a>
+        
+        <a  class="react "
+           href="/2020/03/22/react-hooks-%E5%85%A5%E9%97%A8/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="react-hooks 入门">react-hooks 入门</span>
+            <span class="post-date" title="2020-03-22 10:55:40">2020/03/22</span>
+        </a>
+        
+        <a  class="react "
+           href="/2020/03/22/hooks%E4%B9%8BuseState/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="hooks之useState">hooks之useState</span>
+            <span class="post-date" title="2020-03-22 11:12:03">2020/03/22</span>
+        </a>
+        
+        <a  class="react "
+           href="/2020/03/22/hooks%E4%B9%8BuseEffect/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="hooks之useEffect">hooks之useEffect</span>
+            <span class="post-date" title="2020-03-22 11:24:18">2020/03/22</span>
+        </a>
+        
+        <a  class="ssr "
+           href="/2020/03/02/vue-ssr%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93%E6%96%B9%E6%A1%88/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="vue-ssr服务端渲染方案">vue-ssr服务端渲染方案</span>
+            <span class="post-date" title="2020-03-02 00:00:00">2020/03/02</span>
         </a>
         
     </nav>
@@ -342,7 +398,7 @@
         <article class="index">
             <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于叶落阁"><span class="toc-text">关于叶落阁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于我"><span class="toc-text">关于我</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#学习心得"><span class="toc-text">学习心得</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -355,39 +411,33 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
+            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><blockquote>
+<p>博客是一种很好的技术沉淀的方式，对于我这种记性不是很好还要总学习那种笨鸟，就要边学习边做笔记来加深印象或是做做记号，待以后用到时捡起来容易一点，而且还要有种写出来给别人看的心态，那就更应该写点精简实在的东西，不敢说是干货吧，勉强算是个入门浅析，如果能帮助到别人，那真是好事一桩。</p>
 </blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
+<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><blockquote>
+<p>我是一个来自沈阳的小伙，目前在苏州同程-巴士管家，从事前端工作，工作领域是交通出行。目前在前端领域摸爬滚打，对编程保持新鲜感和好奇心，我会不断地沉淀相关技术，分享自己所学的东西，开源自己写的小项目，未来还要学学WebGl和Tensorflow等一些前沿的技术，继续深入学习，把自己攻克的难关总结成经验心得，分享给大家。</p>
 </blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
+<h2 id="学习心得"><a href="#学习心得" class="headerlink" title="学习心得"></a>学习心得</h2><blockquote>
+<p>我深知自己还有很多的路要走，我很庆幸的是，我当下学习的兴趣和热情不输高考。。。，我当下的学习方法是接触一个技术，就上网找个课或者文章学学，最最主要的是如果学到不会的东西或是模糊的地方一定要记录下来，然后进行总结思考，系统的学一下（可能最后还有可能会忘。。。），只不过会很消耗精力，很容易坚持不下来，而我经过多次尝试总结了一个挺高效的方式：</p>
 </blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="关于叶落阁"><a href="#关于叶落阁" class="headerlink" title="关于叶落阁"></a>关于叶落阁</h2><p><strong>叶落阁</strong> 是阿杰（杨玉杰）的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 生成，部署在 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>，主题 <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">3-hexo</a> 已经在github上开源</p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad/手机等移动端适配</li>
-<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/' target="_blank" rel="noopener">3-hexo快捷键说明</a></li>
-</ul>
+<ol>
+<li><p>使用一个好的笔记软件来进行记笔记：这里我首推-微软的oneNote，全平台支持，云同步，支持书写绘画，制作表格等很多实用的功能</p>
+</li>
+<li><p>写技术博客：将整理的笔记加工提炼，而且要有着分享给他人的动机去做，将知识点谱成一篇篇结构清晰的文章，这里我首推-Hexo+github和掘金的方式</p>
+</li>
+<li><p>使用脑图软件：将写好的文章通过脑图的形式谱成网，这样就相当于将知识网在记忆中，我推荐的软件-marginNote3</p>
+</li>
+</ol>
+<blockquote>
+<p>希望大家不断去学习，日积月累，脚踏实地，但行善事，莫问前程，砥砺前行，不负韶华。</p>
+</blockquote>
 
         </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
         
         
     </div>
     <div class="copyright">
-        <p class="footer-entry">©2016-2019 Yelog</p>
+        <p class="footer-entry">©2016-2019 阿强</p>
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
@@ -404,24 +454,6 @@
     </div>
 </div>
 <div class="acParent"></div>
-
-<div class="hide_box" onclick="dashangToggle()"></div>
-<div class="shang_box">
-    <a class="shang_close"  onclick="dashangToggle()">×</a>
-    <div class="shang_tit">
-        <p>喜欢就点赞,疼爱就打赏</p>
-    </div>
-    <div class="shang_payimg">
-        <div class="pay_img">
-            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
-            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
-        </div>
-    </div>
-    <div class="shang_payselect">
-        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
-    </div>
-</div>
-
 
 </body>
 <script src="/js/jquery.pjax.js?v=1.0.1" ></script>
@@ -444,14 +476,6 @@
         
 
         /*渲染打赏样式*/
-        
-        $("input[name=pay]").on("click", function () {
-            if($("input[name=pay]:checked").val()=="weixin"){
-                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
-            } else {
-                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
-            }
-        })
         
 
         /*高亮代码块行号*/
@@ -484,11 +508,6 @@
     }
 
     /*打赏页面隐藏与展示*/
-    
-    function dashangToggle() {
-        $(".shang_box").fadeToggle();
-        $(".hide_box").fadeToggle();
-    }
     
 
 </script>
